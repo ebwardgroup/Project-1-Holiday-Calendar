@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>World Holiday Calendar</title>
+  <link rel="stylesheet" href="Holiday-Calendar/style.css">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <h1 class =title >
+    World Holiday Calendar
+  </h1>
+
+  <h2 class=instruction>Select any country from the dropdown menu to see its holidays!</h2>
+  
+  <img id=countryFlag>
+    
+
+  <div class="navbar">
+
+    <div class="dropdown">
+      <select id="selectCountry">
+        <option>Choose a country</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="holidayList">
+
+  </div>
+
+  <script>
+
+    var select = document.getElementById("selectCountry");
+
+    var countryList = [
+      {
+        name: "Australia",
+        code: "au",
+      },
+      {
+        name: "China",
+        code: "cn",
+      },
+      {
+        name: "France",
+        code: "fr",
+      },
+      {
+        name: "Japan",
+        code: "jp",
+      },
+      {
+        name: "Norway",
+        code: "no",
+      },
+      {
+        name: "Peru",
+        code: "pe",
+      },
+      {
+        name: "South Korea",
+        code: "kr",
+      },
+      {
+        name: "Ukraine",
+        code: "ua",
+      },
+      {
+        name: "United Kingdom",
+        code: "gb",
+      },
+      {
+        name: "U.S.A.",
+        code: "us",
+      },
+    ];
+
+    function changeImage(imageURL) {
+      var flagImage = document.getElementById("countryFlag");
+      flagImage.setAttribute("src", imageURL);
+    }
+
+    for (var i = 0; i < countryList.length; i++) {
+      var opt = countryList[i];
+      var el = document.createElement("option");
+      el.textContent = opt.name;
+      el.value = opt.code;
+      select.appendChild(el);
+    }
+
+
+    $("#selectCountry").on("change", function () {
+      console.log("whatever");
+
+      var option = $(this).val();
+
+      var queryURL = "https://calendarific.com/api/v2/holidays?api_key=567ba202f6afebf1ca7e5f2e1e1baa2e1f479225&country=" + option + "&year=2020";
+
+      var imageURL = "https://www.countryflags.io/" + option + "/shiny/64.png"
+        changeImage(imageURL);
+
+      
+// Url : api.geonames.org/countryInfo?
+// Parameters : country (default = all countries)
+// lang : ISO-639-1 language code (en,de,fr,it,es,...) (default = english)
+// Result : Country information : Capital, Population, Area in square km, Bounding Box of mainland (excluding offshore islands)
+// Example : http://api.geonames.org/countryInfo?username=demo
+
+
+
+      // Performing our AJAX GET request
+      $.ajax({
+        url: queryURL,
+        method: "GET",
+
+      }).then(function (data) {
+        // console.log(data.response.holidays);
+        $(".holidayList").empty();
+        data.response.holidays.forEach(holiday => {
+          console.log(holiday.date.iso);
+          var holidayDate = $("<div class='holidayDate'>").text(holiday.date.iso);
+          $(".holidayList").append(holidayDate);
+
+          console.log(holiday);
+          var holidayName = $("<div class='holidayName'>").text(holiday.name);
+          $(".holidayList").append(holidayName);
+
+          console.log(holiday);
+          var holidayDescription = $("<div class='holidayDescription'>").text(holiday.description);
+          $(".holidayList").append(holidayDescription);
+
+        });
+
+      }).catch(function (error) {
+        console.log(error);
+      }
+      )
+
+      $(".holidayList").empty();
+
+    })
+
+
+  </script>
+</body>
+
+</html>
