@@ -12,8 +12,8 @@
   }
 
 body {
-  background-color: lightblue;
-  text-align: center;
+  background-color: rgb(206, 235, 245);
+  text-align: left;
 }
 
 .navbar {
@@ -37,7 +37,7 @@ body {
   .dropdown {
     float: left;
     overflow: hidden;
-    text-align: center;
+    text-align: left;
     position: center;
   }
   
@@ -52,14 +52,14 @@ body {
     margin: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-size-adjust: auto;
-    text-align: center;
+    text-align: left;
     position: center;
     
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
     background-color: green;
-    text-align: center;
+    text-align: left;
   }
   
   .dropdown-content {
@@ -70,7 +70,7 @@ body {
     z-index: 1;
     font-family: Georgia, 'Times New Roman', Times, serif;
     text-size-adjust: auto;
-    text-align: center;
+    text-align: left;
     position: center;
    
   }
@@ -84,7 +84,7 @@ body {
     text-size-adjust: auto;
     color: green;
     font-size: x-large;
-    text-align: center;
+    text-align: left;
   }
   
   .dropdown-content a:hover {
@@ -101,7 +101,7 @@ body {
 padding: 3px, 10px, 3px, 10px;
 margin: 10px;
 text-decoration-line: underline;
-text-align: center;
+text-align: left;
     }
   
 .holidayName {
@@ -110,12 +110,12 @@ color: green;
 font-family: fantasy;
 padding: 3px, 10px, 3px, 10px;
 margin: 10px;
-text-align: center;
+text-align: left;
   }
 
 .holidayDescription {
 border-bottom: 1px dashed #000;
 margin: 10px;
 color: green;
-text-align: center;
+text-align: left;
     }
