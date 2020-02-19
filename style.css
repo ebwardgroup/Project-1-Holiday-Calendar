@@ -5,13 +5,6 @@
 
 } 
 
-.headerImage {
-  opacity: 30%;
-  position: center;
-
-}
-
-
 .instruction {
     color: green;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
@@ -19,8 +12,8 @@
   }
 
 body {
-  background-color: rgb(207, 233, 241);
-  text-align: left;
+  background-color: lightblue;
+  text-align: center;
 }
 
 .navbar {
@@ -108,20 +101,21 @@ body {
 padding: 3px, 10px, 3px, 10px;
 margin: 10px;
 text-decoration-line: underline;
-text-align: left;
+text-align: center;
     }
   
 .holidayName {
 font-weight: bold;
+color: green;
 font-family: fantasy;
 padding: 3px, 10px, 3px, 10px;
 margin: 10px;
-text-align: left;
+text-align: center;
   }
 
 .holidayDescription {
 border-bottom: 1px dashed #000;
 margin: 10px;
 color: green;
-text-align: left;
+text-align: center;
     }
