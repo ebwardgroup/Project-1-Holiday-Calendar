@@ -1,0 +1,127 @@
+.title {
+    color: blue;
+    font-family: cursive;
+    text-align: center;
+
+} 
+
+.headerImage {
+  opacity: 30%;
+  position: center;
+
+}
+
+
+.instruction {
+    color: green;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+    text-align: center;
+  }
+
+body {
+  background-color: rgb(207, 233, 241);
+  text-align: left;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-size-adjust: auto;
+  }
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .dropdown {
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    position: center;
+  }
+  
+  .dropdown, .dropbtn {
+    cursor: pointer;
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-size-adjust: auto;
+    text-align: center;
+    position: center;
+    
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+    background-color: green;
+    text-align: center;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-size-adjust: auto;
+    text-align: center;
+    position: center;
+   
+  }
+
+  .dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-size-adjust: auto;
+    color: green;
+    font-size: x-large;
+    text-align: center;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    text-align: center;
+  }
+  
+  .show {
+    display: block;
+    text-align: center;
+  }
+  
+.holidayDate {
+padding: 3px, 10px, 3px, 10px;
+margin: 10px;
+text-decoration-line: underline;
+text-align: left;
+    }
+  
+.holidayName {
+font-weight: bold;
+font-family: fantasy;
+padding: 3px, 10px, 3px, 10px;
+margin: 10px;
+text-align: left;
+  }
+
+.holidayDescription {
+border-bottom: 1px dashed #000;
+margin: 10px;
+color: green;
+text-align: left;
+    }
